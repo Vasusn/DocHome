@@ -1,0 +1,12 @@
+import 'package:flutter/material.dart';
+
+final class AppColorStrings {
+  static const Color whiteColor = Color(0xFFFFFFFF);
+  static const Color blackColor = Color(0xFF000000);
+  static const Color textGreyColor = Color(0xFF6B7280);
+  static const Color midnightBlueColor = Color(0xFF1C2A3A);
+  static const Color greyColor = Color(0xFF9B9B9B);
+  static const Color blueTextColor = Color(0xFF1C64F2);
+  static const Color lightGreyColor = Color(0xFFF9FAFB);
+  static const Color lightGrey200Color = Color(0xFFE5E7EB);
+}
