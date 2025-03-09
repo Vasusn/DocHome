@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 extension MediaQueryExtension on BuildContext {
   double get width => MediaQuery.of(this).size.width;

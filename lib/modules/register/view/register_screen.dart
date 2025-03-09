@@ -1,7 +1,7 @@
 import 'package:dochome/utils/extensions/sizedbox_extension.dart';
 import 'package:dochome/utils/extensions/text_theme_extensions.dart';
 import 'package:dochome/utils/helpers/validator_helper.dart';
-import 'package:dochome/utils/widgets/app_name_rich_text.dart';
+import 'package:dochome/utils/widgets/app_logo_with_app_name.dart';
 import 'package:dochome/utils/widgets/dh_outline_button.dart';
 import 'package:dochome/utils/widgets/dh_text_form_field.dart';
 import 'package:dochome/values/strings/app_routes_string.dart';
@@ -139,7 +139,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   12.height,
                   DHOutlineButton(
                     icon: AppIconStrings.facebookIcon,
-                    text: '${AppStrings.continueWith} ${AppStrings.facebookText}',
+                    text:
+                        '${AppStrings.continueWith} ${AppStrings.facebookText}',
                   ),
                   24.height,
                   RichText(
@@ -150,13 +151,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         TextSpan(
                           text: ' ${AppStrings.signIn}',
                           style: context.themeExtension?.displayMediumBlue,
-                          recognizer:
-                          TapGestureRecognizer()
-                            ..onTap =
-                                () => Navigator.pushReplacementNamed(
-                              context,
-                              AppRouteStrings.loginScreen,
-                            ),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () => Navigator.pushReplacementNamed(
+                                  context,
+                                  AppRouteStrings.loginScreen,
+                                ),
                         ),
                       ],
                     ),

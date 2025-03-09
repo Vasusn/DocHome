@@ -1,9 +1,11 @@
-import 'package:dochome/screens/profile_screen/profile_screen.dart';
+import 'package:dochome/modules/profile/view/profile_screen.dart';
 import 'package:dochome/values/strings/icon_string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -80,13 +82,12 @@ class _HomeScreenState extends State<HomeScreen> {
       onTap: () => _onItemTapped(index),
       child: Container(
         padding: EdgeInsets.all(10),
-        decoration:
-            isSelected
-                ? BoxDecoration(
-                  color: Colors.grey.shade200,
-                  shape: BoxShape.circle,
-                )
-                : null,
+        decoration: isSelected
+            ? BoxDecoration(
+                color: Colors.grey.shade200,
+                shape: BoxShape.circle,
+              )
+            : null,
         child: SvgPicture.asset(
           isSelected ? selectedIcon : unselectedIcon,
           height: 24,

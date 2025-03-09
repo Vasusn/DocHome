@@ -1,11 +1,11 @@
-import 'package:dochome/screens/forgot_password_screen/forgot_password_screen.dart';
-import 'package:dochome/screens/home_screen/home_screen.dart';
-import 'package:dochome/screens/login_screen/login_screen.dart';
-import 'package:dochome/screens/otp_verification_screen/otp_verification_screen.dart';
-import 'package:dochome/screens/register_screen/register_screen.dart';
-import 'package:dochome/screens/reset_password_screen/reset_password_screen.dart';
-import 'package:dochome/screens/splash_screen/splash_screen.dart';
-import 'package:dochome/screens/welcome_screen/welcome_screen.dart';
+import 'package:dochome/modules/forgot-password/view/forgot_password_screen.dart';
+import 'package:dochome/modules/home/view/home_screen.dart';
+import 'package:dochome/modules/login/view/login_screen.dart';
+import 'package:dochome/modules/otp-verification/view/otp_verification_screen.dart';
+import 'package:dochome/modules/register/view/register_screen.dart';
+import 'package:dochome/modules/reset-password/view/reset_password_screen.dart';
+import 'package:dochome/modules/splash/splash_screen.dart';
+import 'package:dochome/modules/welcome/view/welcome_screen.dart';
 import 'package:dochome/values/strings/app_routes_string.dart';
 import 'package:flutter/material.dart';
 

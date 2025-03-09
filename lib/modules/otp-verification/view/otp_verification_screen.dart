@@ -1,6 +1,6 @@
 import 'package:dochome/utils/extensions/sizedbox_extension.dart';
 import 'package:dochome/utils/extensions/text_theme_extensions.dart';
-import 'package:dochome/utils/widgets/app_name_rich_text.dart';
+import 'package:dochome/utils/widgets/app_logo_with_app_name.dart';
 import 'package:dochome/utils/widgets/dh_bottom_rich_text.dart';
 import 'package:dochome/values/strings/app_routes_string.dart';
 import 'package:dochome/values/strings/app_string.dart';
@@ -51,7 +51,6 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                   textAlign: TextAlign.center,
                 ),
                 32.height,
-
                 32.height,
                 SizedBox(
                   width: double.infinity,

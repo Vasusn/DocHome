@@ -1,31 +1,40 @@
 import 'package:dochome/utils/extensions/sizedbox_extension.dart';
 import 'package:dochome/utils/extensions/text_theme_extensions.dart';
 import 'package:dochome/utils/helpers/validator_helper.dart';
-import 'package:dochome/utils/widgets/app_name_rich_text.dart';
+import 'package:dochome/utils/widgets/app_logo_with_app_name.dart';
 import 'package:dochome/utils/widgets/dh_text_form_field.dart';
-import 'package:dochome/values/strings/app_routes_string.dart';
 import 'package:dochome/values/strings/app_string.dart';
 import 'package:dochome/values/strings/icon_string.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 
-class ForgotPasswordScreen extends StatefulWidget {
-  const ForgotPasswordScreen({super.key});
+class ResetPasswordScreen extends StatefulWidget {
+  const ResetPasswordScreen({super.key});
 
   @override
-  State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
+  State<ResetPasswordScreen> createState() => _ResetPasswordScreenState();
 }
 
-class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
+class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
+  final FocusNode passwordFocusNode = FocusNode();
+  final FocusNode confirmPasswordFocusNode = FocusNode();
+
+  @override
+  void dispose() {
+    passwordController.dispose();
+    confirmPasswordController.dispose();
+    passwordFocusNode.dispose();
+    confirmPasswordFocusNode.dispose();
+    super.dispose();
+  }
 
   void _validateAndSubmit() {
     if (_formKey.currentState!.validate()) {
-      Navigator.pushNamed(
-        context,
-        AppRouteStrings.otpVerificationScreen,
-      );
+      // Implement reset password logic
     }
   }
 
@@ -53,26 +62,42 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     ),
                   ),
                   32.height,
-                  AppLogoWithAppName(),
+                  const AppLogoWithAppName(),
                   20.height,
                   Text(
-                    AppStrings.forgotPasswordText,
+                    AppStrings.createNewPassword,
                     style: context.theme.displayLarge,
                   ),
                   8.height,
                   Text(
-                    AppStrings.forgotPasswordSubText,
+                    AppStrings.createNewPasswordSub,
                     style: context.theme.displayMedium,
                     textAlign: TextAlign.center,
                   ),
                   32.height,
                   DHTextFormField(
-                    controller: emailController,
-                    hintText: AppStrings.emailHintText,
-                    icon: AppIconStrings.smsIcon,
+                    controller: passwordController,
+                    hintText: AppStrings.passwordHintText,
+                    icon: AppIconStrings.lockIcon,
+                    focusNode: passwordFocusNode,
+                    nextFocusNode: confirmPasswordFocusNode,
+                    obscureText: true,
                     textInputAction: TextInputAction.next,
-                    keyboardType: TextInputType.emailAddress,
-                    validator: emailValidator,
+                    validator: passwordValidator,
+                  ),
+                  20.height,
+                  DHTextFormField(
+                    controller: confirmPasswordController,
+                    hintText: AppStrings.confirmPasswordHintText,
+                    icon: AppIconStrings.lockIcon,
+                    focusNode: confirmPasswordFocusNode,
+                    obscureText: true,
+                    textInputAction: TextInputAction.done,
+                    validator: (value) {
+                      return (value != null && value == passwordController.text)
+                          ? null
+                          : 'Passwords do not match';
+                    },
                   ),
                   32.height,
                   SizedBox(
@@ -80,7 +105,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     child: ElevatedButton(
                       onPressed: _validateAndSubmit,
                       child: Text(
-                        AppStrings.sendCode,
+                        AppStrings.resetPassword,
                         style: context.theme.labelMedium,
                       ),
                     ),

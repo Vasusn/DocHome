@@ -1,6 +1,6 @@
-import 'package:dochome/screens/welcome_screen/widgets/welcome_screen_1.dart';
-import 'package:dochome/screens/welcome_screen/widgets/welcome_screen_2.dart';
-import 'package:dochome/screens/welcome_screen/widgets/welcome_screen_3.dart';
+import 'package:dochome/modules/welcome/widgets/welcome_screen_1.dart';
+import 'package:dochome/modules/welcome/widgets/welcome_screen_2.dart';
+import 'package:dochome/modules/welcome/widgets/welcome_screen_3.dart';
 import 'package:dochome/utils/extensions/mediaquery_extension.dart';
 import 'package:dochome/utils/extensions/text_theme_extensions.dart';
 import 'package:dochome/values/strings/app_routes_string.dart';
@@ -84,10 +84,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     width: isActive ? 24 : 8,
                     height: 8,
                     decoration: BoxDecoration(
-                      color:
-                          isActive
-                              ? AppColorStrings.midnightBlueColor
-                              : AppColorStrings.greyColor,
+                      color: isActive
+                          ? AppColorStrings.midnightBlueColor
+                          : AppColorStrings.greyColor,
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -100,12 +99,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             left: 20,
             right: 20,
             child: GestureDetector(
-              onTap:
-                  () => Navigator.pushNamedAndRemoveUntil(
-                    context,
-                    AppRouteStrings.registerScreen,
-                    (route) => false,
-                  ),
+              onTap: () => Navigator.pushNamedAndRemoveUntil(
+                context,
+                AppRouteStrings.registerScreen,
+                (route) => false,
+              ),
               child: Text(
                 AppStrings.skip,
                 style: context.theme.displayMedium,

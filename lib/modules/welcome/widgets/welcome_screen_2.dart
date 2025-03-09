@@ -1,4 +1,4 @@
-import 'package:dochome/screens/welcome_screen/widgets/welcome_screen_builder.dart';
+import 'package:dochome/modules/welcome/widgets/welcome_screen_builder.dart';
 import 'package:dochome/values/strings/app_string.dart';
 import 'package:dochome/values/strings/image_string.dart';
 import 'package:flutter/material.dart';
