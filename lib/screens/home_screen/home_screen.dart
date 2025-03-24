@@ -1,3 +1,4 @@
+import 'package:dochome/screens/booking_screen/booking_screen.dart';
 import 'package:dochome/screens/profile_screen/profile_screen.dart';
 import 'package:dochome/values/strings/icon_string.dart';
 import 'package:flutter/material.dart';
@@ -14,8 +15,8 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> _pages = [
     Center(child: Text('Home Page', style: TextStyle(fontSize: 20))),
     Center(child: Text('Location Page', style: TextStyle(fontSize: 20))),
-    Center(child: Text('Appointments Page', style: TextStyle(fontSize: 20))),
-    ProfileScreen()
+    BookingScreen(),
+    ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {

@@ -1,6 +1,8 @@
+import 'package:dochome/screens/edit_profile/edit_profile.dart';
 import 'package:dochome/screens/forgot_password_screen/forgot_password_screen.dart';
 import 'package:dochome/screens/home_screen/home_screen.dart';
 import 'package:dochome/screens/login_screen/login_screen.dart';
+import 'package:dochome/screens/notification_screen/notification_screen.dart';
 import 'package:dochome/screens/otp_verification_screen/otp_verification_screen.dart';
 import 'package:dochome/screens/register_screen/register_screen.dart';
 import 'package:dochome/screens/reset_password_screen/reset_password_screen.dart';
@@ -28,6 +30,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => ResetPasswordScreen());
       case AppRouteStrings.homeScreen:
         return MaterialPageRoute(builder: (_) => HomeScreen());
+      case AppRouteStrings.editProfileScreen:
+        return MaterialPageRoute(builder: (_) => EditProfile());
+      case AppRouteStrings.notificationScreen:
+        return MaterialPageRoute(builder: (_) => NotificationScreen());
       default:
         return _errorRoute();
     }

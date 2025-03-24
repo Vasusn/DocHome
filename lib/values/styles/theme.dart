@@ -7,8 +7,11 @@ import 'package:google_fonts/google_fonts.dart';
 final class AppThemes {
   static ThemeData lightThemeData() {
     return ThemeData(
+      colorScheme: ColorScheme.fromSeed(seedColor: AppColorStrings.greyColor),
+      useMaterial3: true,
       fontFamily: GoogleFonts.inter().fontFamily,
       scaffoldBackgroundColor: AppColorStrings.whiteColor,
+      appBarTheme: AppBarTheme(backgroundColor: AppColorStrings.whiteColor),
       textTheme: TextTheme(
         titleMedium: AppStyles.titleMedium,
         displayMedium: AppStyles.displayMedium,
@@ -22,6 +25,11 @@ final class AppThemes {
           displayLargeGrey: AppStyles.displayLargeGrey,
           labelMediumBold: AppStyles.labelMediumBold,
           titleMediumGrey: AppStyles.titleMediumGrey,
+          displayMediumSemiBoldWhite: AppStyles.displayMediumSemiBoldWhite,
+          labelMediumBlack: AppStyles.labelMediumBlack,
+          displayMediumBoldBlack: AppStyles.displayMediumBoldBlack,
+          displayLargeSemiBoldBlack: AppStyles.displayLargeSemiBoldBlack,
+          labelMediumSemiBoldGrey: AppStyles.labelMediumSemiBoldGrey,
         ),
       ],
       elevatedButtonTheme: AppStyles.elevatedButtonThemeData,

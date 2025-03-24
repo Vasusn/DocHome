@@ -20,4 +20,7 @@ final class AppIconStrings {
   static const String securitySafeIcon = 'assets/icons/security_safe.svg';
   static const String logoutIcon = 'assets/icons/logout.svg';
   static const String arrowRightIcon = 'assets/icons/arrow_right.svg';
+  static const String calendarTickIcon = 'assets/icons/calendar_tick.svg';
+  static const String calendarRemoveIcon = 'assets/icons/calendar_remove.svg';
+  static const String calendarEditIcon = 'assets/icons/calendar_edit.svg';
 }
