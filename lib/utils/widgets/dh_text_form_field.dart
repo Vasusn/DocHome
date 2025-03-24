@@ -8,7 +8,7 @@ class DHTextFormField extends StatelessWidget {
     super.key,
     required this.controller,
     required this.hintText,
-    required this.icon,
+    this.icon,
     this.obscureText = false,
     this.focusNode,
     this.nextFocusNode,
@@ -19,7 +19,7 @@ class DHTextFormField extends StatelessWidget {
 
   final TextEditingController controller;
   final String hintText;
-  final String icon;
+  final String? icon;
   final bool obscureText;
   final FocusNode? focusNode;
   final FocusNode? nextFocusNode;
@@ -48,10 +48,11 @@ class DHTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: context.theme.displayMedium,
-        prefixIcon: Padding(
+        prefixIcon: icon != null
+            ? Padding(
           padding: EdgeInsets.only(left: 16, top: 14, bottom: 14),
           child: SvgPicture.asset(
-            icon,
+            icon!,
             colorFilter: ColorFilter.mode(
               AppColorStrings.greyColor,
               BlendMode.srcIn,
@@ -59,7 +60,8 @@ class DHTextFormField extends StatelessWidget {
             width: 18,
             height: 18,
           ),
-        ),
+        )
+            : null, // Remove padding if no icon
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.0),
           borderSide: BorderSide(color: AppColorStrings.greyColor),
@@ -73,7 +75,7 @@ class DHTextFormField extends StatelessWidget {
           borderSide: BorderSide(color: AppColorStrings.greyColor),
         ),
         filled: true,
-        fillColor: AppColorStrings.lightGreyColor,
+        fillColor: AppColorStrings.lightBgGreyColor,
       ),
     );
   }

@@ -1,7 +1,9 @@
-import 'package:dochome/modules/profile/view/profile_screen.dart';
+import 'package:dochome/screens/booking_screen/booking_screen.dart';
 import 'package:dochome/values/strings/icon_string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../profile/view/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,8 +18,8 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> _pages = [
     Center(child: Text('Home Page', style: TextStyle(fontSize: 20))),
     Center(child: Text('Location Page', style: TextStyle(fontSize: 20))),
-    Center(child: Text('Appointments Page', style: TextStyle(fontSize: 20))),
-    ProfileScreen()
+    BookingScreen(),
+    ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -82,12 +84,13 @@ class _HomeScreenState extends State<HomeScreen> {
       onTap: () => _onItemTapped(index),
       child: Container(
         padding: EdgeInsets.all(10),
-        decoration: isSelected
-            ? BoxDecoration(
-                color: Colors.grey.shade200,
-                shape: BoxShape.circle,
-              )
-            : null,
+        decoration:
+            isSelected
+                ? BoxDecoration(
+                  color: Colors.grey.shade200,
+                  shape: BoxShape.circle,
+                )
+                : null,
         child: SvgPicture.asset(
           isSelected ? selectedIcon : unselectedIcon,
           height: 24,

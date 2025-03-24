@@ -84,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     obscureText: true,
                     nextFocusNode: signInFocusNode,
                     textInputAction: TextInputAction.done,
-                    validator: passwordValidator,
+
                   ),
                   24.height,
                   SizedBox(

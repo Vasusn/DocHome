@@ -57,4 +57,25 @@ final class AppStrings {
   static const String helpSupport = 'Help and Support';
   static const String termsConditions = 'Terms and Conditions';
   static const String logout = 'Log Out';
+  static const String editProfileAppbarText = 'Fill Your Profile';
+  static const String nicknameHintText = 'Nickname';
+  static const String userNameHintText = 'Username';
+  static const String dobHintText = 'Date of Birth';
+  static const String saveText = 'Save';
+  static const String notificationAppbarText = 'Notification';
+  static const String today = 'TODAY';
+  static const String yesterday = 'YESTERDAY';
+  static const String markAllAsRead = 'Mark all as read';
+  static const String appointmentSuccess = 'Appointment Success';
+  static const String appointmentCancelled = 'Appointment Cancelled';
+  static const String scheduledChanged = 'Scheduled Changed';
+  static const String successfulText =
+      'You have successfully booked your appointment with Dr. Emily Walker.';
+  static const String cancelledText =
+      'You have successfully cancelled your appointment with Dr. David Patel.';
+  static const String scheduledText =
+      'You have successfully changes your appointment with Dr. Jesica Turner.';
+static const String myBookingText =
+      'My Bookings';
+
 }
