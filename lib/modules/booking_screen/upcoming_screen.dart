@@ -50,13 +50,13 @@ class UpcomingScreen extends StatelessWidget {
 
 class DHUpcomingCard extends StatelessWidget {
   const DHUpcomingCard({
-    super.key,
     required this.dateTime,
     required this.drName,
     required this.drDegree,
     required this.hospitalLocation,
     required this.isCompleted,
     required this.image,
+    super.key,
   });
 
   final String dateTime;

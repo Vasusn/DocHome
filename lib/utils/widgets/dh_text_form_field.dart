@@ -51,7 +51,7 @@ class DHTextFormField extends StatelessWidget {
         prefixIcon:
             icon != null
                 ? Padding(
-                  padding: EdgeInsets.only(left: 16, top: 14, bottom: 14),
+                  padding: const EdgeInsets.only(left: 16, top: 14, bottom: 14),
                   child: SvgPicture.asset(
                     //   colorFilter: ColorFilter.mode(
                     //     AppColorStrings.greyColor,
@@ -77,7 +77,7 @@ class DHTextFormField extends StatelessWidget {
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.0),
-          borderSide: BorderSide(color: AppColorStrings.greyColor),
+          borderSide: const BorderSide(color: AppColorStrings.greyColor),
         ),
         filled: true,
         fillColor: AppColorStrings.lightBgGreyColor,

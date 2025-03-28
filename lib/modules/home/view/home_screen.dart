@@ -1,7 +1,6 @@
 import 'package:dochome/modules/baby-register/view/baby_register_screen.dart';
 import 'package:dochome/modules/booking_screen/booking_screen.dart';
 import 'package:dochome/modules/profile/view/profile_screen.dart';
-import 'package:dochome/utils/extensions/text_theme_extensions.dart';
 import 'package:dochome/values/strings/icon_string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -88,7 +87,8 @@ class _HomeScreenState extends State<HomeScreen> {
     required String selectedIcon,
     required String unselectedIcon,
   }) {
-    bool isSelected = _selectedIndex == index;
+    final isSelected = _selectedIndex == index;
+
     return GestureDetector(
       onTap: () => _onItemTapped(index),
       child: Container(

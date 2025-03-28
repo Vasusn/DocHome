@@ -61,19 +61,19 @@ class ProfileScreen extends StatelessWidget {
                           ),
                     ),
                     const Divider(),
-                    DHProfileListTile(
+                    const DHProfileListTile(
                       leadingIcon: AppIconStrings.settingIcon,
                       title: AppStrings.settings,
                       trailingIcon: AppIconStrings.arrowRightIcon,
                     ),
                     const Divider(),
-                    DHProfileListTile(
+                    const DHProfileListTile(
                       leadingIcon: AppIconStrings.messageQuestionIcon,
                       title: AppStrings.helpSupport,
                       trailingIcon: AppIconStrings.arrowRightIcon,
                     ),
                     const Divider(),
-                    DHProfileListTile(
+                    const DHProfileListTile(
                       leadingIcon: AppIconStrings.securitySafeIcon,
                       title: AppStrings.termsConditions,
                       trailingIcon: AppIconStrings.arrowRightIcon,
@@ -82,7 +82,7 @@ class ProfileScreen extends StatelessWidget {
                     DHProfileListTile(
                       leadingIcon: AppIconStrings.logoutIcon,
                       title: AppStrings.logout,
-                      // onTap: () => showLogoutBottomSheet(context),
+                      onTap: () => showLogoutBottomSheet(context),
                     ),
                   ],
                 ),
@@ -95,12 +95,102 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 
+void showLogoutBottomSheet(BuildContext context) {
+  showModalBottomSheet(
+    isDismissible: false,
+    context: context,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+    ),
+    backgroundColor: Colors.white,
+    builder: (context) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text(
+              'Logout',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+                color: Colors.black,
+              ),
+            ),
+            const SizedBox(height: 12),
+            Divider(color: Colors.grey.shade300, thickness: 1),
+            const SizedBox(height: 12),
+            Text(
+              'Are you sure you want to log out?',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+                color: Colors.grey.shade600,
+              ),
+            ),
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.pop(context),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.grey.shade200,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      padding: const EdgeInsets.symmetric(vertical: 14),
+                    ),
+                    child: const Text(
+                      'Cancel',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      // Add logout functionality here
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.black,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      padding: const EdgeInsets.symmetric(vertical: 14),
+                    ),
+                    child: const Text(
+                      'Yes, Logout',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      );
+    },
+  );
+}
+
 class DHProfileListTile extends StatelessWidget {
-  DHProfileListTile({
-    super.key,
-    this.onTap,
+  const DHProfileListTile({
     required this.leadingIcon,
     required this.title,
+    super.key,
+    this.onTap,
     this.trailingIcon,
   });
 

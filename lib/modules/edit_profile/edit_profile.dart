@@ -40,7 +40,7 @@ class _EditProfileState extends State<EditProfile> {
         child: Column(
           children: [
             32.height,
-            CircleAvatar(
+            const CircleAvatar(
               radius: 84,
               backgroundColor: AppColorStrings.greyColor,
               child: Icon(
