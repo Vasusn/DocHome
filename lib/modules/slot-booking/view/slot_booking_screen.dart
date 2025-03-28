@@ -1,5 +1,6 @@
 import 'package:dochome/modules/baby-register/model/baby_register_model.dart';
 import 'package:dochome/modules/slot-booking/controller/slot_booking_controller.dart';
+import 'package:dochome/utils/extensions/sizedbox_extension.dart';
 import 'package:dochome/utils/extensions/text_theme_extensions.dart';
 import 'package:dochome/values/strings/app_strings.dart';
 import 'package:flutter/material.dart';
@@ -25,21 +26,36 @@ class _SlotBookingScreenState extends State<SlotBookingScreen>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('${AppStrings.name}: ${widget.baby.name}'),
-            TextButton(onPressed: pickDate, child: const Text('Select Date')),
+            24.height,
+            TextButton(
+              onPressed: pickDate,
+              child: Text('Select Date', style: context.theme.displayMedium),
+            ),
+            24.height,
+
             Text(
               selectedDate == null
                   ? AppStrings.noDateChosen
                   : DateFormat('yyyy-MM-dd').format(selectedDate!),
             ),
+            24.height,
+
             TextButton(
               onPressed: pickTime,
-              child: const Text(AppStrings.selectTime),
+              child: Text(
+                AppStrings.selectTime,
+                style: context.theme.displayMedium,
+              ),
             ),
+            24.height,
+
             Text(
               selectedTime == null
                   ? AppStrings.noTimeChosen
                   : selectedTime!.format(context),
             ),
+            24.height,
+
             DropdownButton<String>(
               hint: const Text(AppStrings.selectVaccine),
               value: selectedVaccine,
@@ -54,6 +70,8 @@ class _SlotBookingScreenState extends State<SlotBookingScreen>
                       )
                       .toList(),
             ),
+            24.height,
+
             SizedBox(
               width: double.maxFinite,
               child: ElevatedButton(

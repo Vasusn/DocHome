@@ -1,6 +1,8 @@
 import 'package:dochome/modules/baby-register/controller/baby_register_controller.dart';
 import 'package:dochome/modules/slot-booking/view/slot_booking_screen.dart';
+import 'package:dochome/utils/extensions/sizedbox_extension.dart';
 import 'package:dochome/utils/extensions/text_theme_extensions.dart';
+import 'package:dochome/utils/widgets/dh_text_form_field.dart';
 import 'package:dochome/values/strings/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -16,17 +18,19 @@ class _BabyRegistrationScreenState extends State<BabyRegistrationScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(AppStrings.registerBaby)),
+      appBar: AppBar(
+        title: Text(AppStrings.registerBaby, style: context.theme.displayLarge),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            TextField(
+            DHTextFormField(
+              hintText: AppStrings.babyName,
               controller: nameController,
-              decoration: const InputDecoration(labelText: AppStrings.babyName),
             ),
-            const SizedBox(height: 10),
+            24.height,
             Row(
               children: [
                 Text(
@@ -40,6 +44,7 @@ class _BabyRegistrationScreenState extends State<BabyRegistrationScreen>
                 ),
               ],
             ),
+            24.height,
             DropdownButton<String>(
               hint: const Text(AppStrings.selectGender),
               value: gender,
@@ -59,7 +64,7 @@ class _BabyRegistrationScreenState extends State<BabyRegistrationScreen>
                     );
                   }).toList(),
             ),
-
+            24.height,
             SizedBox(
               width: double.maxFinite,
               child: ElevatedButton(
@@ -71,11 +76,29 @@ class _BabyRegistrationScreenState extends State<BabyRegistrationScreen>
               ),
             ),
             if (registeredBaby != null) ...[
+              24.height,
               const Divider(),
-              const Text('Profile'),
-              Text('Name: ${registeredBaby!.name}'),
-              Text('Age: ${registeredBaby!.age} years'),
-              Text('Gender: ${registeredBaby!.gender}'),
+              24.height,
+              Center(child: Text('Profile', style: context.theme.displayLarge)),
+              24.height,
+
+              Text(
+                'Name: ${registeredBaby!.name}',
+                style: context.theme.displayMedium,
+              ),
+              24.height,
+
+              Text(
+                'Age: ${registeredBaby!.age} years',
+                style: context.theme.displayMedium,
+              ),
+              24.height,
+
+              Text(
+                'Gender: ${registeredBaby!.gender}',
+                style: context.theme.displayMedium,
+              ),
+              24.height,
               SizedBox(
                 width: double.maxFinite,
                 child: ElevatedButton(
