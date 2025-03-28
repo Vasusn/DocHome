@@ -1,6 +1,6 @@
 import 'package:dochome/utils/extensions/sizedbox_extension.dart';
 import 'package:dochome/utils/extensions/text_theme_extensions.dart';
-import 'package:dochome/values/strings/app_string.dart';
+import 'package:dochome/values/strings/app_strings.dart';
 import 'package:dochome/values/strings/color_string.dart';
 import 'package:dochome/values/strings/icon_string.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +21,7 @@ class NotificationScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 24),
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4),
                 color: AppColorStrings.grey600Color,
@@ -35,25 +35,25 @@ class NotificationScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           children: [
-            RowWithDayAndMarkAllRead(dayName: AppStrings.today),
-            DHNotificationCard(
+            const RowWithDayAndMarkAllRead(dayName: AppStrings.today),
+            const DHNotificationCard(
               icon: AppIconStrings.calendarTickIcon,
               backgroundColor: AppColorStrings.lightGreenColor,
               headerText: AppStrings.appointmentSuccess,
               subText: AppStrings.successfulText,
               totalTime: '1h',
             ),
-            DHNotificationCard(
+            const DHNotificationCard(
               icon: AppIconStrings.calendarRemoveIcon,
               backgroundColor: AppColorStrings.lightRedColor,
               headerText: AppStrings.appointmentCancelled,
               subText: AppStrings.cancelledText,
               totalTime: '2h',
             ),
-            DHNotificationCard(
+            const DHNotificationCard(
               icon: AppIconStrings.calendarEditIcon,
               backgroundColor: AppColorStrings.lightGreyColor,
               headerText: AppStrings.scheduledChanged,
@@ -61,8 +61,8 @@ class NotificationScreen extends StatelessWidget {
               totalTime: '8h',
             ),
             32.height,
-            RowWithDayAndMarkAllRead(dayName: AppStrings.yesterday),
-            DHNotificationCard(
+            const RowWithDayAndMarkAllRead(dayName: AppStrings.yesterday),
+            const DHNotificationCard(
               icon: AppIconStrings.calendarTickIcon,
               backgroundColor: AppColorStrings.lightGreenColor,
               headerText: AppStrings.appointmentSuccess,
@@ -78,12 +78,12 @@ class NotificationScreen extends StatelessWidget {
 
 class DHNotificationCard extends StatelessWidget {
   const DHNotificationCard({
-    super.key,
     required this.icon,
     required this.backgroundColor,
     required this.headerText,
     required this.subText,
     required this.totalTime,
+    super.key,
   });
 
   final String icon;
@@ -128,7 +128,7 @@ class DHNotificationCard extends StatelessWidget {
 }
 
 class RowWithDayAndMarkAllRead extends StatelessWidget {
-  const RowWithDayAndMarkAllRead({super.key, required this.dayName});
+  const RowWithDayAndMarkAllRead({required this.dayName, super.key});
 
   final String dayName;
 
@@ -146,4 +146,3 @@ class RowWithDayAndMarkAllRead extends StatelessWidget {
     );
   }
 }
-

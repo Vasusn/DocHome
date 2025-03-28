@@ -4,7 +4,7 @@ import 'package:dochome/modules/welcome/widgets/welcome_screen_3.dart';
 import 'package:dochome/utils/extensions/mediaquery_extension.dart';
 import 'package:dochome/utils/extensions/text_theme_extensions.dart';
 import 'package:dochome/values/strings/app_routes_string.dart';
-import 'package:dochome/values/strings/app_string.dart';
+import 'package:dochome/values/strings/app_strings.dart';
 import 'package:dochome/values/strings/color_string.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +18,7 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-  PageController pageController = PageController(initialPage: 0);
+  PageController pageController = PageController();
   WelcomePage activePage = WelcomePage.screen1;
 
   final List<Widget> pages = const [
@@ -40,7 +40,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         children: [
           PageView.builder(
             controller: pageController,
-            onPageChanged: (index) => changePage(index),
+            onPageChanged: changePage,
             itemCount: pages.length,
             itemBuilder: (context, index) => pages[index],
           ),
@@ -53,17 +53,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 switch (activePage) {
                   case WelcomePage.screen1:
                     pageControllerAnimation(activePage);
-                    break;
                   case WelcomePage.screen2:
                     pageControllerAnimation(activePage);
-                    break;
                   case WelcomePage.screen3:
                     Navigator.pushNamedAndRemoveUntil(
                       context,
                       AppRouteStrings.registerScreen,
                       (route) => false,
                     );
-                    break;
                 }
               },
               child: Text(AppStrings.next, style: context.theme.labelMedium),
@@ -76,7 +73,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(pages.length, (index) {
-                bool isActive = (activePage == WelcomePage.values[index]);
+                final isActive = (activePage == WelcomePage.values[index]);
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4),
                   child: AnimatedContainer(
@@ -84,9 +81,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     width: isActive ? 24 : 8,
                     height: 8,
                     decoration: BoxDecoration(
-                      color: isActive
-                          ? AppColorStrings.midnightBlueColor
-                          : AppColorStrings.greyColor,
+                      color:
+                          isActive
+                              ? AppColorStrings.midnightBlueColor
+                              : AppColorStrings.greyColor,
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -99,11 +97,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             left: 20,
             right: 20,
             child: GestureDetector(
-              onTap: () => Navigator.pushNamedAndRemoveUntil(
-                context,
-                AppRouteStrings.registerScreen,
-                (route) => false,
-              ),
+              onTap:
+                  () => Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    AppRouteStrings.registerScreen,
+                    (route) => false,
+                  ),
               child: Text(
                 AppStrings.skip,
                 style: context.theme.displayMedium,

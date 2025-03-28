@@ -11,8 +11,7 @@ final class AppThemes {
       useMaterial3: true,
       fontFamily: GoogleFonts.inter().fontFamily,
       scaffoldBackgroundColor: AppColorStrings.whiteColor,
-      appBarTheme: AppBarTheme(backgroundColor: AppColorStrings.whiteColor),
-      textTheme: TextTheme(
+      textTheme: const TextTheme(
         titleMedium: AppStyles.titleMedium,
         displayMedium: AppStyles.displayMedium,
         labelMedium: AppStyles.labelMedium,
@@ -37,7 +36,7 @@ final class AppThemes {
         style: OutlinedButton.styleFrom(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
-            side: BorderSide(color: AppColorStrings.lightGrey200Color),
+            side: const BorderSide(color: AppColorStrings.lightGrey200Color),
           ),
           padding: const EdgeInsets.symmetric(vertical: 10),
         ),

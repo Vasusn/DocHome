@@ -57,6 +57,29 @@ final class AppStrings {
   static const String helpSupport = 'Help and Support';
   static const String termsConditions = 'Terms and Conditions';
   static const String logout = 'Log Out';
+
+  static const String registerBaby = 'Register Baby';
+  static const String babyName = 'Baby Name';
+  static const String selectDOB = 'Select DOB';
+  static const String selectGender = 'Select Gender';
+  static const String male = 'male';
+  static const String female = 'Female';
+  static const String bookVaccinationSlot = 'Book Vaccination Slot';
+
+  static const String registerABaby = 'Register a Baby';
+  static const String homePage = 'Home Page';
+
+  static const String noVaccinesAvailable =
+      'No Vaccines Available For This Age';
+  static const String vaccineBookedSuccessfully =
+      'Vaccination Slot Booked Successfully!';
+  static const String bookSlot = 'Book Slot';
+  static const String name = 'Name';
+  static const String selectDate = 'Select Date';
+  static const String noDateChosen = 'No date chosen';
+  static const String selectTime = 'Select Time';
+  static const String noTimeChosen = 'No time chosen';
+  static const String selectVaccine = 'Select Vaccine';
   static const String editProfileAppbarText = 'Fill Your Profile';
   static const String nicknameHintText = 'Nickname';
   static const String userNameHintText = 'Username';
@@ -75,7 +98,5 @@ final class AppStrings {
       'You have successfully cancelled your appointment with Dr. David Patel.';
   static const String scheduledText =
       'You have successfully changes your appointment with Dr. Jesica Turner.';
-static const String myBookingText =
-      'My Bookings';
-
+  static const String myBookingText = 'My Bookings';
 }

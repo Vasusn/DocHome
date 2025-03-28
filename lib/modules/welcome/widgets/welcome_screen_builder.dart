@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 
 class WelcomeScreenBuilder extends StatelessWidget {
   const WelcomeScreenBuilder({
-    super.key,
     required this.headerImage,
     required this.headerText,
     required this.subText,
+    super.key,
   });
 
   final String headerImage;

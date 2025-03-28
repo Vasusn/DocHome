@@ -47,9 +47,12 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
       displayMediumSemiBoldWhite:
           displayMediumSemiBoldWhite ?? this.displayMediumSemiBoldWhite,
       labelMediumBlack: labelMediumBlack ?? this.labelMediumBlack,
-      displayMediumBoldBlack: displayMediumBoldBlack ?? this.displayMediumBoldBlack,
-      displayLargeSemiBoldBlack: displayLargeSemiBoldBlack ?? this.displayLargeSemiBoldBlack,
-      labelMediumSemiBoldGrey: labelMediumSemiBoldGrey ?? this.labelMediumSemiBoldGrey,
+      displayMediumBoldBlack:
+          displayMediumBoldBlack ?? this.displayMediumBoldBlack,
+      displayLargeSemiBoldBlack:
+          displayLargeSemiBoldBlack ?? this.displayLargeSemiBoldBlack,
+      labelMediumSemiBoldGrey:
+          labelMediumSemiBoldGrey ?? this.labelMediumSemiBoldGrey,
     );
   }
 
@@ -72,7 +75,7 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
       labelMediumBold:
           TextStyle.lerp(labelMediumBold, other.labelMediumBold, t)!,
       titleMediumGrey:
-          TextStyle.lerp(titleMediumGrey, other.titleMediumGrey, t)!,
+          TextStyle.lerp(labelMediumBold, other.labelMediumBold, t)!,
       displayMediumSemiBoldWhite:
           TextStyle.lerp(
             displayMediumSemiBoldWhite,
@@ -82,11 +85,23 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
       labelMediumBlack:
           TextStyle.lerp(labelMediumBlack, other.labelMediumBlack, t)!,
       displayMediumBoldBlack:
-          TextStyle.lerp(displayMediumBoldBlack, other.displayMediumBoldBlack, t)!,
+          TextStyle.lerp(
+            displayMediumBoldBlack,
+            other.displayMediumBoldBlack,
+            t,
+          )!,
       displayLargeSemiBoldBlack:
-          TextStyle.lerp(displayLargeSemiBoldBlack, other.displayLargeSemiBoldBlack, t)!,
+          TextStyle.lerp(
+            displayLargeSemiBoldBlack,
+            other.displayLargeSemiBoldBlack,
+            t,
+          )!,
       labelMediumSemiBoldGrey:
-          TextStyle.lerp(labelMediumSemiBoldGrey, other.labelMediumSemiBoldGrey, t)!,
+          TextStyle.lerp(
+            labelMediumSemiBoldGrey,
+            other.labelMediumSemiBoldGrey,
+            t,
+          )!,
     );
   }
 }

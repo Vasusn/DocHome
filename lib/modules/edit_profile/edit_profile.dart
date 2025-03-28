@@ -1,7 +1,7 @@
 import 'package:dochome/utils/extensions/sizedbox_extension.dart';
 import 'package:dochome/utils/extensions/text_theme_extensions.dart';
 import 'package:dochome/utils/widgets/dh_text_form_field.dart';
-import 'package:dochome/values/strings/app_string.dart';
+import 'package:dochome/values/strings/app_strings.dart';
 import 'package:dochome/values/strings/color_string.dart';
 import 'package:dochome/values/strings/icon_string.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +40,7 @@ class _EditProfileState extends State<EditProfile> {
         child: Column(
           children: [
             32.height,
-            CircleAvatar(
+            const CircleAvatar(
               radius: 84,
               backgroundColor: AppColorStrings.greyColor,
               child: Icon(

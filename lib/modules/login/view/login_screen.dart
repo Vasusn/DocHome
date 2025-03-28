@@ -5,7 +5,7 @@ import 'package:dochome/utils/widgets/app_logo_with_app_name.dart';
 import 'package:dochome/utils/widgets/dh_outline_button.dart';
 import 'package:dochome/utils/widgets/dh_text_form_field.dart';
 import 'package:dochome/values/strings/app_routes_string.dart';
-import 'package:dochome/values/strings/app_string.dart';
+import 'package:dochome/values/strings/app_strings.dart';
 import 'package:dochome/values/strings/icon_string.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 children: [
                   32.height,
-                  AppLogoWithAppName(),
+                  const AppLogoWithAppName(),
                   20.height,
                   Text(
                     AppStrings.loginHeaderText,
@@ -85,6 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     nextFocusNode: signInFocusNode,
                     textInputAction: TextInputAction.done,
 
+                    validator: passwordValidator,
                   ),
                   24.height,
                   SizedBox(
@@ -101,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   22.height,
                   Row(
                     children: [
-                      Expanded(child: Divider()),
+                      const Expanded(child: Divider()),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 24),
                         child: Text(
@@ -109,25 +110,26 @@ class _LoginScreenState extends State<LoginScreen> {
                           style: context.themeExtension?.displayMediumGrey,
                         ),
                       ),
-                      Expanded(child: Divider()),
+                      const Expanded(child: Divider()),
                     ],
                   ),
                   22.height,
-                  DHOutlineButton(
+                  const DHOutlineButton(
                     icon: AppIconStrings.googleIcon,
                     text: '${AppStrings.signInWith} ${AppStrings.googleText}',
                   ),
                   12.height,
-                  DHOutlineButton(
+                  const DHOutlineButton(
                     icon: AppIconStrings.facebookIcon,
                     text: '${AppStrings.signInWith} ${AppStrings.facebookText}',
                   ),
                   24.height,
                   GestureDetector(
-                    onTap: () => Navigator.pushNamed(
-                      context,
-                      AppRouteStrings.forgotPasswordScreen,
-                    ),
+                    onTap:
+                        () => Navigator.pushNamed(
+                          context,
+                          AppRouteStrings.forgotPasswordScreen,
+                        ),
                     child: Text(
                       AppStrings.forgotPasswordText,
                       style: context.themeExtension?.displayMediumBlue,
@@ -142,11 +144,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         TextSpan(
                           text: ' ${AppStrings.signUp}',
                           style: context.themeExtension?.displayMediumBlue,
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () => Navigator.pushReplacementNamed(
-                                  context,
-                                  AppRouteStrings.registerScreen,
-                                ),
+                          recognizer:
+                              TapGestureRecognizer()
+                                ..onTap =
+                                    () => Navigator.pushReplacementNamed(
+                                      context,
+                                      AppRouteStrings.registerScreen,
+                                    ),
                         ),
                       ],
                     ),

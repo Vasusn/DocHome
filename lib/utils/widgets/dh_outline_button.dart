@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class DHOutlineButton extends StatelessWidget {
-  const DHOutlineButton({super.key, required this.icon, required this.text});
+  const DHOutlineButton({required this.text, super.key, this.icon});
 
-  final String icon;
+  final String? icon;
   final String text;
 
   @override
@@ -18,7 +18,10 @@ class DHOutlineButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(icon, height: 20, width: 20),
+            if (icon != null)
+              SvgPicture.asset(icon!, height: 20, width: 20)
+            else
+              const SizedBox.shrink(),
             8.width,
             Text(text, style: context.theme.displayMedium),
           ],
