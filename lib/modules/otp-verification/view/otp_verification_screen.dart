@@ -3,7 +3,7 @@ import 'package:dochome/utils/extensions/text_theme_extensions.dart';
 import 'package:dochome/utils/widgets/app_logo_with_app_name.dart';
 import 'package:dochome/utils/widgets/dh_bottom_rich_text.dart';
 import 'package:dochome/values/strings/app_routes_string.dart';
-import 'package:dochome/values/strings/app_string.dart';
+import 'package:dochome/values/strings/app_strings.dart';
 import 'package:dochome/values/strings/icon_string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -38,7 +38,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                   ),
                 ),
                 32.height,
-                AppLogoWithAppName(),
+                const AppLogoWithAppName(),
                 20.height,
                 Text(
                   AppStrings.verifyCodeText,
@@ -68,7 +68,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                   ),
                 ),
                 24.height,
-                DHBottomRichText(
+                const DHBottomRichText(
                   mainText: AppStrings.notGetCode,
                   subText: ' ${AppStrings.resend}',
                   routeName: 'null',

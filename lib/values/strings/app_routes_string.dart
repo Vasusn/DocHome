@@ -9,4 +9,5 @@ final class AppRouteStrings {
   static const String homeScreen = '/homeScreen';
   static const String editProfileScreen = '/editProfileScreen';
   static const String notificationScreen = '/notificationScreen';
+  static const String babyRegistrationScreen = 'BabyRegistrationScreen';
 }

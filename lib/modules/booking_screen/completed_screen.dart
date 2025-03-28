@@ -1,4 +1,4 @@
-import 'package:dochome/screens/booking_screen/upcoming_screen.dart';
+import 'package:dochome/modules/booking_screen/upcoming_screen.dart';
 import 'package:dochome/utils/extensions/sizedbox_extension.dart';
 import 'package:dochome/values/strings/color_string.dart';
 import 'package:dochome/values/strings/image_string.dart';
@@ -15,7 +15,7 @@ class CompletedScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         child: ListView(
           children: [
-            DHUpcomingCard(
+            const DHUpcomingCard(
               dateTime: 'May 22, 2023 - 10.00 AM',
               drName: 'Dr. James Robinson',
               drDegree: 'Orthopedic Surgery',
@@ -24,7 +24,7 @@ class CompletedScreen extends StatelessWidget {
               image: AppImagesStings.welcomeScreen1,
             ),
             10.height,
-            DHUpcomingCard(
+            const DHUpcomingCard(
               dateTime: 'June 14, 2023 - 03.00 PM',
               drName: 'Dr. Daniel Lee',
               drDegree: 'Cardiology',
@@ -33,7 +33,7 @@ class CompletedScreen extends StatelessWidget {
               image: AppImagesStings.welcomeScreen2,
             ),
             10.height,
-            DHUpcomingCard(
+            const DHUpcomingCard(
               dateTime: 'July 10, 2023 - 11.30 AM',
               drName: 'Dr. Sarah Thompson',
               drDegree: 'Dermatology',

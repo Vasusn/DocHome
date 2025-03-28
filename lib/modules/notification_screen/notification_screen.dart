@@ -1,6 +1,6 @@
 import 'package:dochome/utils/extensions/sizedbox_extension.dart';
 import 'package:dochome/utils/extensions/text_theme_extensions.dart';
-import 'package:dochome/values/strings/app_string.dart';
+import 'package:dochome/values/strings/app_strings.dart';
 import 'package:dochome/values/strings/color_string.dart';
 import 'package:dochome/values/strings/icon_string.dart';
 import 'package:flutter/material.dart';
@@ -146,4 +146,3 @@ class RowWithDayAndMarkAllRead extends StatelessWidget {
     );
   }
 }
-

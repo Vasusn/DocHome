@@ -8,11 +8,13 @@ final class AppIconStrings {
   static const String homeIcon = 'assets/icons/home.svg';
   static const String homeSelectedIcon = 'assets/icons/home_selected.svg';
   static const String locationIcon = 'assets/icons/location.svg';
-  static const String locationSelectedIcon = 'assets/icons/location_selected.svg';
+  static const String locationSelectedIcon =
+      'assets/icons/location_selected.svg';
   static const String profileIcon = 'assets/icons/profile.svg';
   static const String profileSelectedIcon = 'assets/icons/profile_selected.svg';
   static const String appointmentIcon = 'assets/icons/appointment.svg';
-  static const String appointmentSelectedIcon = 'assets/icons/appointment_selected.svg';
+  static const String appointmentSelectedIcon =
+      'assets/icons/appointment_selected.svg';
   static const String userEditIcon = 'assets/icons/user_edit.svg';
   static const String notificationIcon = 'assets/icons/notification.svg';
   static const String settingIcon = 'assets/icons/setting.svg';

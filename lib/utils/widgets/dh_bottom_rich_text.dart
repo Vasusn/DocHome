@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 class DHBottomRichText extends StatelessWidget {
   const DHBottomRichText({
-    super.key,
     required this.mainText,
     required this.subText,
     required this.routeName,
+    super.key,
   });
 
   final String mainText;

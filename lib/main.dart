@@ -1,6 +1,6 @@
 import 'package:dochome/routes.dart';
 import 'package:dochome/values/strings/app_routes_string.dart';
-import 'package:dochome/values/strings/app_string.dart';
+import 'package:dochome/values/strings/app_strings.dart';
 import 'package:dochome/values/styles/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: AppStrings.appName,
       theme: AppThemes.lightThemeData(),
       onGenerateRoute: AppRoutes.generateRoute,
-      initialRoute: AppRouteStrings.welcomeScreen,
+      initialRoute: AppRouteStrings.homeScreen,
     );
   }
 }

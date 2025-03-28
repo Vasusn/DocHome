@@ -1,9 +1,10 @@
-import 'package:dochome/screens/booking_screen/booking_screen.dart';
+import 'package:dochome/modules/baby-register/view/baby_register_screen.dart';
+import 'package:dochome/modules/booking_screen/booking_screen.dart';
+import 'package:dochome/modules/profile/view/profile_screen.dart';
+import 'package:dochome/utils/extensions/text_theme_extensions.dart';
 import 'package:dochome/values/strings/icon_string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import '../../profile/view/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,11 +16,19 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = [
-    Center(child: Text('Home Page', style: TextStyle(fontSize: 20))),
-    Center(child: Text('Location Page', style: TextStyle(fontSize: 20))),
-    BookingScreen(),
-    ProfileScreen(),
+  final List<Widget> _pages = <Widget>[
+    // Center(
+    //   child: Column(
+    //     children: [
+    //       ElevatedButton(onPressed: () {}, child: const Text('Book')),
+    //       const Text('Home Page', style: TextStyle(fontSize: 20)),
+    //     ],
+    //   ),
+    // ),
+    const Center(child: Text('Location Page', style: TextStyle(fontSize: 20))),
+    const BabyRegistrationScreen(),
+    const BookingScreen(),
+    const ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -33,8 +42,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: IndexedStack(index: _selectedIndex, children: _pages),
       bottomNavigationBar: Container(
-        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        decoration: const BoxDecoration(
           color: Colors.white,
           boxShadow: [
             BoxShadow(
@@ -83,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return GestureDetector(
       onTap: () => _onItemTapped(index),
       child: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         decoration:
             isSelected
                 ? BoxDecoration(
@@ -91,6 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   shape: BoxShape.circle,
                 )
                 : null,
+
         child: SvgPicture.asset(
           isSelected ? selectedIcon : unselectedIcon,
           height: 24,

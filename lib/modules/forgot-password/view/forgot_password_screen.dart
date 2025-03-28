@@ -4,7 +4,7 @@ import 'package:dochome/utils/helpers/validator_helper.dart';
 import 'package:dochome/utils/widgets/app_logo_with_app_name.dart';
 import 'package:dochome/utils/widgets/dh_text_form_field.dart';
 import 'package:dochome/values/strings/app_routes_string.dart';
-import 'package:dochome/values/strings/app_string.dart';
+import 'package:dochome/values/strings/app_strings.dart';
 import 'package:dochome/values/strings/icon_string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -22,10 +22,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
 
   void _validateAndSubmit() {
     if (_formKey.currentState!.validate()) {
-      Navigator.pushNamed(
-        context,
-        AppRouteStrings.otpVerificationScreen,
-      );
+      Navigator.pushNamed(context, AppRouteStrings.otpVerificationScreen);
     }
   }
 
@@ -53,7 +50,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     ),
                   ),
                   32.height,
-                  AppLogoWithAppName(),
+                  const AppLogoWithAppName(),
                   20.height,
                   Text(
                     AppStrings.forgotPasswordText,
