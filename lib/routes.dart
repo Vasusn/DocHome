@@ -34,6 +34,7 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => EditProfile());
       case AppRouteStrings.notificationScreen:
         return MaterialPageRoute(builder: (_) => NotificationScreen());
+
       default:
         return _errorRoute();
     }

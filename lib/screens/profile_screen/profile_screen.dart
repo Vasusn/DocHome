@@ -106,6 +106,7 @@ class DHProfileListTile extends StatelessWidget {
     return ListTile(
       contentPadding: EdgeInsets.symmetric(horizontal: 0),
       onTap: onTap,
+      dense: true,
       visualDensity: VisualDensity.compact,
       leading: SvgPicture.asset(leadingIcon, height: 24, width: 24),
       title: Text(title, style: context.themeExtension?.titleMediumGrey),
