@@ -1,13 +1,14 @@
 import 'package:dochome/modules/baby-register/view/baby_register_screen.dart';
+import 'package:dochome/modules/edit_profile/edit_profile.dart';
 import 'package:dochome/modules/forgot-password/view/forgot_password_screen.dart';
 import 'package:dochome/modules/home/view/home_screen.dart';
 import 'package:dochome/modules/login/view/login_screen.dart';
+import 'package:dochome/modules/notification_screen/notification_screen.dart';
 import 'package:dochome/modules/otp-verification/view/otp_verification_screen.dart';
 import 'package:dochome/modules/register/view/register_screen.dart';
 import 'package:dochome/modules/reset-password/view/reset_password_screen.dart';
 import 'package:dochome/modules/splash/splash_screen.dart';
 import 'package:dochome/modules/welcome/view/welcome_screen.dart';
-
 import 'package:dochome/values/strings/app_routes_string.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const ResetPasswordScreen());
       case AppRouteStrings.homeScreen:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
+      case AppRouteStrings.editProfileScreen:
+        return MaterialPageRoute(builder: (_) => const EditProfile());
+      case AppRouteStrings.notificationScreen:
+        return MaterialPageRoute(builder: (_) => const NotificationScreen());
       case AppRouteStrings.babyRegistrationScreen:
         return MaterialPageRoute(
           builder: (_) => const BabyRegistrationScreen(),
