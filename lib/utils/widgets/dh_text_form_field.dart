@@ -76,11 +76,11 @@ class DHTextFormField extends StatelessWidget {
           ),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12.0),
+          borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: AppColorStrings.greyColor),
         ),
         filled: true,
-        fillColor: AppColorStrings.lightBgGreyColor,
+        fillColor: AppColorStrings.lightGreyColor,
       ),
     );
   }

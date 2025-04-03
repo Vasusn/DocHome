@@ -9,7 +9,7 @@ final class AppStyles {
     height: 1.5,
   );
   static TextStyle titleMediumGrey = titleMedium.copyWith(
-    color: AppColorStrings.textGreyColor,
+    color: AppColorStrings.grey500Color,
     fontWeight: FontWeight.normal,
   );
   static const TextStyle displayMedium = TextStyle(
@@ -17,10 +17,25 @@ final class AppStyles {
     fontWeight: FontWeight.normal,
     letterSpacing: 0,
     height: 1.5,
-    color: AppColorStrings.textGreyColor,
+    color: AppColorStrings.grey500Color,
   );
   static TextStyle displayMediumGrey = displayMedium.copyWith(
     color: AppColorStrings.greyColor,
+  );
+  static TextStyle displayMediumGrey700Bold600 = displayMedium.copyWith(
+    color: AppColorStrings.grey700Color,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'inter',
+  );
+  static TextStyle displayMediumGrey600Bold700 = displayMedium.copyWith(
+    color: AppColorStrings.grey600Color,
+    fontWeight: FontWeight.w700,
+    fontFamily: 'inter',
+  );
+  static TextStyle displayMediumGrey500Bold500 = displayMedium.copyWith(
+    color: AppColorStrings.grey500Color,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'inter',
   );
   static TextStyle displayMediumSemiBoldWhite = displayMedium.copyWith(
     color: AppColorStrings.whiteColor,
@@ -45,12 +60,25 @@ final class AppStyles {
     color: AppColorStrings.blackColor,
     fontWeight: FontWeight.bold,
   );
+  static TextStyle labelMediumBold700MidnightBlue = labelMedium.copyWith(
+    color: AppColorStrings.midnightBlueColor,
+    fontWeight: FontWeight.w700,
+    fontFamily: 'inter',
+  );
   static TextStyle labelMediumBlack = labelMedium.copyWith(
     color: AppColorStrings.blackColor,
   );
   static TextStyle labelMediumSemiBoldGrey = labelMedium.copyWith(
-    color: AppColorStrings.textGreyColor,
+    color: AppColorStrings.grey500Color,
     fontWeight: FontWeight.w600,
+  );
+  static const TextStyle labelSmallBold700grey600 = TextStyle(
+    fontFamily: 'inter',
+    fontSize: 12,
+    fontWeight: FontWeight.w700,
+    color: AppColorStrings.grey600Color,
+    letterSpacing: 0,
+    height: 1.5,
   );
   static const TextStyle displayLarge = TextStyle(
     fontSize: 20,
@@ -59,7 +87,7 @@ final class AppStyles {
     height: 1.5,
   );
   static TextStyle displayLargeGrey = displayLarge.copyWith(
-    color: AppColorStrings.textGreyColor,
+    color: AppColorStrings.grey500Color,
   );
   static TextStyle displayLargeSemiBoldBlack = displayLarge.copyWith(
     color: AppColorStrings.blackColor,

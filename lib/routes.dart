@@ -9,6 +9,7 @@ import 'package:dochome/modules/register/view/register_screen.dart';
 import 'package:dochome/modules/reset-password/view/reset_password_screen.dart';
 import 'package:dochome/modules/splash/splash_screen.dart';
 import 'package:dochome/modules/welcome/view/welcome_screen.dart';
+import 'package:dochome/utils/widgets/dh_root_navigator.dart';
 import 'package:dochome/values/strings/app_routes_string.dart';
 import 'package:flutter/material.dart';
 
@@ -29,6 +30,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const OtpVerificationScreen());
       case AppRouteStrings.resetPasswordScreen:
         return MaterialPageRoute(builder: (_) => const ResetPasswordScreen());
+      case AppRouteStrings.rootNavigator:
+        return MaterialPageRoute(builder: (_) => const DHRootNavigator());
       case AppRouteStrings.homeScreen:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
       case AppRouteStrings.editProfileScreen:

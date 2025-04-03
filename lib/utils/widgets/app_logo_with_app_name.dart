@@ -11,7 +11,7 @@ class AppLogoWithAppName extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(AppImagesStings.appIcon, height: 66),
+        Image.asset(AppImagesStrings.appIcon, height: 66),
         12.height,
         RichText(
           text: TextSpan(

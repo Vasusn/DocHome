@@ -6,8 +6,9 @@ final class AppRouteStrings {
   static const String forgotPasswordScreen = '/forgotPasswordScreen';
   static const String otpVerificationScreen = '/otpVerificationScreen';
   static const String resetPasswordScreen = '/resetPasswordScreen';
+  static const String rootNavigator = '/rootNavigator';
   static const String homeScreen = '/homeScreen';
   static const String editProfileScreen = '/editProfileScreen';
   static const String notificationScreen = '/notificationScreen';
-  static const String babyRegistrationScreen = 'BabyRegistrationScreen';
+  static const String babyRegistrationScreen = '/babyRegistrationScreen';
 }

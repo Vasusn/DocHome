@@ -4,17 +4,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class DHOutlineButton extends StatelessWidget {
-  const DHOutlineButton({required this.text, super.key, this.icon});
+  const DHOutlineButton({
+    required this.text,
+    super.key,
+    this.icon,
+    this.onPressed,
+  });
 
   final String? icon;
   final String text;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       child: OutlinedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

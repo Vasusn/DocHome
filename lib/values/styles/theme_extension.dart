@@ -12,6 +12,11 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
     required this.displayMediumBoldBlack,
     required this.displayLargeSemiBoldBlack,
     required this.labelMediumSemiBoldGrey,
+    required this.displayMediumGrey700Bold600,
+    required this.displayMediumGrey600Bold700,
+    required this.displayMediumGrey500Bold500,
+    required this.labelMediumBold700MidnightBlue,
+    required this.labelSmallBold700grey600,
   });
 
   final TextStyle displayMediumGrey;
@@ -24,6 +29,11 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
   final TextStyle displayMediumBoldBlack;
   final TextStyle displayLargeSemiBoldBlack;
   final TextStyle labelMediumSemiBoldGrey;
+  final TextStyle displayMediumGrey700Bold600;
+  final TextStyle displayMediumGrey600Bold700;
+  final TextStyle displayMediumGrey500Bold500;
+  final TextStyle labelMediumBold700MidnightBlue;
+  final TextStyle labelSmallBold700grey600;
 
   @override
   ThemeExtension<AppThemeExtension> copyWith({
@@ -37,6 +47,11 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
     TextStyle? displayMediumBoldBlack,
     TextStyle? displayLargeSemiBoldBlack,
     TextStyle? labelMediumSemiBoldGrey,
+    TextStyle? displayMediumGrey700Bold600,
+    TextStyle? displayMediumGrey600Bold700,
+    TextStyle? displayMediumGrey500Bold500,
+    TextStyle? labelMediumBold700MidnightBlue,
+    TextStyle? labelSmallBold700grey600,
   }) {
     return AppThemeExtension(
       displayMediumGrey: displayMediumGrey ?? this.displayMediumGrey,
@@ -53,6 +68,16 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
           displayLargeSemiBoldBlack ?? this.displayLargeSemiBoldBlack,
       labelMediumSemiBoldGrey:
           labelMediumSemiBoldGrey ?? this.labelMediumSemiBoldGrey,
+      displayMediumGrey700Bold600:
+          displayMediumGrey700Bold600 ?? this.displayMediumGrey700Bold600,
+      displayMediumGrey600Bold700:
+          displayMediumGrey600Bold700 ?? this.displayMediumGrey600Bold700,
+      displayMediumGrey500Bold500:
+          displayMediumGrey500Bold500 ?? this.displayMediumGrey500Bold500,
+      labelMediumBold700MidnightBlue:
+          labelMediumBold700MidnightBlue ?? this.labelMediumBold700MidnightBlue,
+      labelSmallBold700grey600:
+          labelSmallBold700grey600 ?? this.labelSmallBold700grey600,
     );
   }
 
@@ -100,6 +125,36 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
           TextStyle.lerp(
             labelMediumSemiBoldGrey,
             other.labelMediumSemiBoldGrey,
+            t,
+          )!,
+      displayMediumGrey700Bold600:
+          TextStyle.lerp(
+            displayMediumGrey700Bold600,
+            other.displayMediumGrey700Bold600,
+            t,
+          )!,
+      displayMediumGrey600Bold700:
+          TextStyle.lerp(
+            displayMediumGrey600Bold700,
+            other.displayMediumGrey600Bold700,
+            t,
+          )!,
+      displayMediumGrey500Bold500:
+          TextStyle.lerp(
+            displayMediumGrey500Bold500,
+            other.displayMediumGrey500Bold500,
+            t,
+          )!,
+      labelMediumBold700MidnightBlue:
+          TextStyle.lerp(
+            labelMediumBold700MidnightBlue,
+            other.labelMediumBold700MidnightBlue,
+            t,
+          )!,
+      labelSmallBold700grey600:
+          TextStyle.lerp(
+            labelSmallBold700grey600,
+            other.labelSmallBold700grey600,
             t,
           )!,
     );

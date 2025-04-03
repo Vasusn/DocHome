@@ -29,6 +29,12 @@ final class AppThemes {
           displayMediumBoldBlack: AppStyles.displayMediumBoldBlack,
           displayLargeSemiBoldBlack: AppStyles.displayLargeSemiBoldBlack,
           labelMediumSemiBoldGrey: AppStyles.labelMediumSemiBoldGrey,
+          displayMediumGrey700Bold600: AppStyles.displayMediumGrey700Bold600,
+          displayMediumGrey600Bold700: AppStyles.displayMediumGrey600Bold700,
+          displayMediumGrey500Bold500: AppStyles.displayMediumGrey500Bold500,
+          labelMediumBold700MidnightBlue:
+              AppStyles.labelMediumBold700MidnightBlue,
+          labelSmallBold700grey600: AppStyles.labelSmallBold700grey600,
         ),
       ],
       elevatedButtonTheme: AppStyles.elevatedButtonThemeData,
@@ -42,5 +48,9 @@ final class AppThemes {
         ),
       ),
     );
+  }
+
+  static ThemeData darkThemeData() {
+    return ThemeData.dark();
   }
 }

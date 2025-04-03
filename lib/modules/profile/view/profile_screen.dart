@@ -14,7 +14,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
           child: Column(
             children: [
               Text(AppStrings.profile, style: context.theme.displayLarge),
@@ -38,6 +38,7 @@ class ProfileScreen extends StatelessWidget {
               16.height,
               Expanded(
                 child: ListView(
+                  padding: EdgeInsets.zero,
                   children: [
                     DHProfileListTile(
                       leadingIcon: AppIconStrings.userEditIcon,
@@ -96,7 +97,7 @@ class ProfileScreen extends StatelessWidget {
 }
 
 void showLogoutBottomSheet(BuildContext context) {
-  showModalBottomSheet(
+  showModalBottomSheet<void>(
     isDismissible: false,
     context: context,
     shape: const RoundedRectangleBorder(

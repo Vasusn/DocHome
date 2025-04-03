@@ -25,4 +25,26 @@ final class AppIconStrings {
   static const String calendarTickIcon = 'assets/icons/calendar_tick.svg';
   static const String calendarRemoveIcon = 'assets/icons/calendar_remove.svg';
   static const String calendarEditIcon = 'assets/icons/calendar_edit.svg';
+
+  //=============home_page================
+  static const String homeSearchNormalIcon =
+      'assets/icons/home_search_normal_icon.svg';
+  static const String homeSetLocationIcon =
+      'assets/icons/home_set_location_icon.svg';
+  static const String homeNotificationBingIcon =
+      'assets/icons/home_notification_bing_icon.svg';
+
+  static const String categoryDentistry = 'assets/icons/category_dentistry.svg';
+  static const String categoryCardiology =
+      'assets/icons/category_cardiology.svg';
+  static const String categoryGastroenterology =
+      'assets/icons/category_gastroenterology.svg';
+  static const String categoryGeneral = 'assets/icons/category_general.svg';
+  static const String categoryLaboratory =
+      'assets/icons/category_laboratory.svg';
+  static const String categoryNeurology = 'assets/icons/category_neurology.svg';
+  static const String categoryPulmonology =
+      'assets/icons/category_pulmonology.svg';
+  static const String categoryVaccination =
+      'assets/icons/category_vaccination.svg';
 }
