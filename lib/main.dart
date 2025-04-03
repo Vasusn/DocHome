@@ -14,10 +14,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: AppStrings.appName,
       theme: AppThemes.lightThemeData(),
       onGenerateRoute: AppRoutes.generateRoute,
-      initialRoute: AppRouteStrings.homeScreen,
+      initialRoute: AppRouteStrings.welcomeScreen,
     );
   }
 }
