@@ -23,103 +23,107 @@ class _BabyRegistrationScreenState extends State<BabyRegistrationScreen>
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            DHTextFormField(
-              hintText: AppStrings.babyName,
-              controller: nameController,
-            ),
-            24.height,
-            Row(
-              children: [
-                Text(
-                  dob == null
-                      ? AppStrings.selectDOB
-                      : DateFormat('yyyy-MM-dd').format(dob!),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.calendar_today),
-                  onPressed: () => selectDate(context),
-                ),
-              ],
-            ),
-            24.height,
-            DropdownButton<String>(
-              hint: const Text(AppStrings.selectGender),
-              value: gender,
-              onChanged: (String? newValue) {
-                setState(() {
-                  gender = newValue;
-                });
-              },
-              items:
-                  [
-                    AppStrings.male,
-                    AppStrings.female,
-                  ].map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(value),
-                    );
-                  }).toList(),
-            ),
-            24.height,
-            SizedBox(
-              width: double.maxFinite,
-              child: ElevatedButton(
-                onPressed: registerBaby,
-                child: Text(
-                  AppStrings.registerBaby,
-                  style: context.theme.labelMedium,
-                ),
-              ),
-            ),
-            if (registeredBaby != null) ...[
-              24.height,
-              const Divider(),
-              24.height,
-              Center(child: Text('Profile', style: context.theme.displayLarge)),
-              24.height,
-
-              Text(
-                'Name: ${registeredBaby!.name}',
-                style: context.theme.displayMedium,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              DHTextFormField(
+                hintText: AppStrings.babyName,
+                controller: nameController,
               ),
               24.height,
-
-              Text(
-                'Age: ${registeredBaby!.age} years',
-                style: context.theme.displayMedium,
+              Row(
+                children: [
+                  Text(
+                    dob == null
+                        ? AppStrings.selectDOB
+                        : DateFormat('yyyy-MM-dd').format(dob!),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.calendar_today),
+                    onPressed: () => selectDate(context),
+                  ),
+                ],
               ),
               24.height,
-
-              Text(
-                'Gender: ${registeredBaby!.gender}',
-                style: context.theme.displayMedium,
+              DropdownButton<String>(
+                hint: const Text(AppStrings.selectGender),
+                value: gender,
+                onChanged: (String? newValue) {
+                  setState(() {
+                    gender = newValue;
+                  });
+                },
+                items:
+                    [
+                      AppStrings.male,
+                      AppStrings.female,
+                    ].map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
               ),
               24.height,
               SizedBox(
                 width: double.maxFinite,
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder:
-                            (context) =>
-                                SlotBookingScreen(baby: registeredBaby!),
-                      ),
-                    );
-                  },
+                  onPressed: registerBaby,
                   child: Text(
-                    AppStrings.bookVaccinationSlot,
+                    AppStrings.registerBaby,
                     style: context.theme.labelMedium,
                   ),
                 ),
               ),
+              if (registeredBaby != null) ...[
+                24.height,
+                const Divider(),
+                24.height,
+                Center(
+                  child: Text('Profile', style: context.theme.displayLarge),
+                ),
+                24.height,
+
+                Text(
+                  'Name: ${registeredBaby!.name}',
+                  style: context.theme.displayMedium,
+                ),
+                24.height,
+
+                Text(
+                  'Age: ${registeredBaby!.age} years',
+                  style: context.theme.displayMedium,
+                ),
+                24.height,
+
+                Text(
+                  'Gender: ${registeredBaby!.gender}',
+                  style: context.theme.displayMedium,
+                ),
+                24.height,
+                SizedBox(
+                  width: double.maxFinite,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder:
+                              (context) =>
+                                  SlotBookingScreen(baby: registeredBaby!),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      AppStrings.bookVaccinationSlot,
+                      style: context.theme.labelMedium,
+                    ),
+                  ),
+                ),
+              ],
             ],
-          ],
+          ),
         ),
       ),
     );

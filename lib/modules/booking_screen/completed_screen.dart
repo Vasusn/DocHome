@@ -21,7 +21,7 @@ class CompletedScreen extends StatelessWidget {
               drDegree: 'Orthopedic Surgery',
               hospitalLocation: 'Elite Ortho Clinic, USA',
               isCompleted: false,
-              image: AppImagesStings.welcomeScreen1,
+              image: AppImagesStrings.welcomeScreen1,
             ),
             10.height,
             const DHUpcomingCard(
@@ -30,7 +30,7 @@ class CompletedScreen extends StatelessWidget {
               drDegree: 'Cardiology',
               hospitalLocation: 'Heart Care Clinic, USA',
               isCompleted: false,
-              image: AppImagesStings.welcomeScreen2,
+              image: AppImagesStrings.welcomeScreen2,
             ),
             10.height,
             const DHUpcomingCard(
@@ -39,7 +39,7 @@ class CompletedScreen extends StatelessWidget {
               drDegree: 'Dermatology',
               hospitalLocation: 'Skin Glow Center, USA',
               isCompleted: false,
-              image: AppImagesStings.welcomeScreen3,
+              image: AppImagesStrings.welcomeScreen3,
             ),
           ],
         ),

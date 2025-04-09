@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _validateAndSubmit() {
     if (_formKey.currentState!.validate()) {
-      Navigator.pushReplacementNamed(context, AppRouteStrings.homeScreen);
+      Navigator.pushReplacementNamed(context, AppRouteStrings.rootNavigator);
     }
   }
 

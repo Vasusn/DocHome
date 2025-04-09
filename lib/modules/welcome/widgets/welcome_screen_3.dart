@@ -10,7 +10,7 @@ class WelcomeScreen3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: WelcomeScreenBuilder(
-        headerImage: AppImagesStings.welcomeScreen3,
+        headerImage: AppImagesStrings.welcomeScreen3,
         headerText: AppStrings.welcomeScreen3HeaderText,
         subText: AppStrings.welcomeScreen3SubText,
       ),

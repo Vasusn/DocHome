@@ -5,13 +5,18 @@ final class AppStrings {
 
   static const String welcomeScreen1HeaderText = 'Convenient Home Vaccination';
   static const String welcomeScreen1SubText =
-      'Get your child vaccinated at the comfort of your home with certified doctors. Safe, timely, and hassle-free vaccination services at your doorstep.';
+      'Get your child vaccinated at the comfort of your home with '
+      'certified doctors.Safe, timely, and hassle-free vaccination '
+      'services at your doorstep.';
   static const String welcomeScreen2HeaderText = 'Easy Slot Booking & Tracking';
   static const String welcomeScreen2SubText =
-      'Book vaccination slots online, track upcoming doses, and receive automated reminders to ensure timely immunization for your child.';
+      'Book vaccination slots online, track upcoming doses, and receive'
+      ' automated reminders to ensure timely immunization for your child.';
   static const String welcomeScreen3HeaderText = 'Digital Medical Records';
   static const String welcomeScreen3SubText =
-      'Access and manage vaccination history with ease. Maintain secure digital medical records for a seamless healthcare experience.';
+      'Access and manage vaccination history with ease.'
+      ' Maintain secure digital medical records for a seamless '
+      'healthcare experience.';
 
   static const String next = 'Next';
   static const String skip = 'Skip';
@@ -99,4 +104,12 @@ final class AppStrings {
   static const String scheduledText =
       'You have successfully changes your appointment with Dr. Jesica Turner.';
   static const String myBookingText = 'My Bookings';
+
+  //-----------------home screen------------------
+  static const String location = 'Location';
+  static const String selectedLocation = 'Seattle, USA';
+  static const String searchDoctorHint = 'Search doctor...';
+  static const String categories = 'Categories';
+  static const String seeAll = 'See All';
+  static const String nearbyClinics = 'Nearby Medical Centers';
 }

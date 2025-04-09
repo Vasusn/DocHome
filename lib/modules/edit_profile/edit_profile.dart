@@ -37,56 +37,58 @@ class _EditProfileState extends State<EditProfile> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
-        child: Column(
-          children: [
-            32.height,
-            const CircleAvatar(
-              radius: 84,
-              backgroundColor: AppColorStrings.greyColor,
-              child: Icon(
-                Icons.person,
-                size: 80,
-                color: AppColorStrings.whiteColor,
-              ),
-            ),
-            24.height,
-            DHTextFormField(
-              controller: useNameController,
-              hintText: AppStrings.userNameHintText,
-            ),
-            20.height,
-            DHTextFormField(
-              controller: nickNameController,
-              hintText: AppStrings.nicknameHintText,
-            ),
-            20.height,
-            DHTextFormField(
-              controller: emailController,
-              hintText: AppStrings.emailHintText,
-            ),
-            20.height,
-            DHTextFormField(
-              controller: emailController,
-              hintText: AppStrings.dobHintText,
-              icon: AppIconStrings.appointmentIcon,
-            ),
-            20.height,
-            DHTextFormField(
-              controller: emailController,
-              hintText: AppStrings.dobHintText,
-            ),
-            32.height,
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text(
-                  AppStrings.saveText,
-                  style: context.theme.labelMedium,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              32.height,
+              const CircleAvatar(
+                radius: 84,
+                backgroundColor: AppColorStrings.greyColor,
+                child: Icon(
+                  Icons.person,
+                  size: 80,
+                  color: AppColorStrings.whiteColor,
                 ),
               ),
-            ),
-          ],
+              24.height,
+              DHTextFormField(
+                controller: useNameController,
+                hintText: AppStrings.userNameHintText,
+              ),
+              20.height,
+              DHTextFormField(
+                controller: nickNameController,
+                hintText: AppStrings.nicknameHintText,
+              ),
+              20.height,
+              DHTextFormField(
+                controller: emailController,
+                hintText: AppStrings.emailHintText,
+              ),
+              20.height,
+              DHTextFormField(
+                controller: emailController,
+                hintText: AppStrings.dobHintText,
+                icon: AppIconStrings.appointmentIcon,
+              ),
+              20.height,
+              DHTextFormField(
+                controller: emailController,
+                hintText: AppStrings.dobHintText,
+              ),
+              32.height,
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    AppStrings.saveText,
+                    style: context.theme.labelMedium,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
